@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExitBox.how - Your Unschooling Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #4CAF50; /* Earthy green for a cozy feel */
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fdfaf6; /* Warm cream background */
+            color: #333; /* Soft dark gray text */
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav li {
+            margin: 0;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+        }
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+        section {
+            background-color: #fff; /* White card-like sections */
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle lift effect */
+        }
+        h2 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 2em;
+            color: var(--accent-color);
+        }
+        p {
+            line-height: 1.6;
+        }
+        .handwritten {
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.2em;
+            color: #555; /* Slightly softer gray */
+        }
+        .resource {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .resource h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .resource p {
+            margin: 5px 0;
+        }
+        .resource a {
+            color: var(--accent-color);
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            margin-top: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ExitBox.how</h1>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home">
+        <h2>Welcome to ExitBox.how</h2>
+        <p class="handwritten">Hey there! I’m so glad you’re here.</p>
+        <p>This is a little corner for folks curious about unschooling—a place to explore learning that’s free, personal, and true to you. Whether you’re new to this or a seasoned wanderer, there’s something here for you: ideas, tools, and a small crew of kindred spirits.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Unschooling</h2>
+        <p>Unschooling is about trusting yourself—your curiosity, your pace, your passions. It’s learning what lights you up, when it feels right, and how it fits you best. I’ve been walking this path for a while, and I’d love to share what I’ve picked up along the way.</p>
+        <p>Here at ExitBox.how, it’s all about keeping things real and close-knit. We’re here to help you carve out your own way of learning, with a bit of support and a lot of heart.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <div class="resource">
+            <h3>Guide to Getting Started with Unschooling</h3>
+            <p>A little roadmap for kicking things off—simple and straight from the heart.</p>
+            <a href="#">Check It Out</a>
+        </div>
+        <div class="resource">
+            <h3>Books That Speak to Me</h3>
+            <p>Some reads that have shaped my unschooling journey.</p>
+            <a href="#">See the List</a>
+        </div>
+        <div class="resource">
+            <h3>Tools I Love</h3>
+            <p>Stuff I use to keep my learning flowing—nothing fancy, just what works.</p>
+            <a href="#">Take a Look</a>
+        </div>
+    </section>
+
+    <section id="community">
+        <h2>Community</h2>
+        <p class="handwritten">We’re a tiny, tight-knit bunch.</p>
+        <p>This isn’t a big crowd—it’s a handful of us unschoolers who’ve got each other’s backs. Want to join in? Sign up for our newsletter or shoot me an email. I’d love to hear what brought you here.</p>
+        <p><a href="#">Hop on the Newsletter</a></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Got a question? A story to share? Or just wanna say hi? I’m all ears—reach out whenever you feel like it.</p>
+        <form data-netlify="true">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Email: <a href="mailto:contact@exitbox.how">contact@exitbox.how</a></p>
+    </section>
+
+    <script>
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
