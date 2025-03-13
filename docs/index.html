@@ -3,156 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Deeply Good Page</title>
+    <title>ExitBox.how - A Place to Grow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --earthy-green: #4B4F31;
+            --warm-brown: #8B4513;
+            --soft-cream: #FDFAF6;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Light and Dark Mode */
-        body.light {
-            background: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--soft-cream);
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-        body.dark {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        /* Header */
-        header {
+        .header {
             text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(135deg, #6b48ff, #00ddeb);
+            padding: 20px;
+            background-color: var(--earthy-green);
             color: white;
-            position: relative;
         }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            animation: fadeIn 1s ease-in;
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin: 0;
         }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-
-        /* Toggle Button */
-        #theme-toggle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
+        .nav li {
+            margin: 0;
+        }
+        .nav a {
+            text-decoration: none;
             color: white;
-            transition: background 0.3s;
+            font-size: 1.2em;
         }
-        #theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .nav a:hover {
+            color: var(--warm-brown);
         }
         section {
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: slideUp 0.8s ease forwards;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        section:nth-child(1) { animation-delay: 0.2s; }
-        section:nth-child(2) { animation-delay: 0.4s; }
-        section:nth-child(3) { animation-delay: 0.6s; }
         h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: inherit;
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: var(--earthy-green);
         }
         p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            line-height: 1.6;
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
+        .hero-image {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            margin-bottom: 20px;
         }
-        footer.dark {
-            background: #111;
+        #warehouse {
+            background-image: url('warehouse.jpg'); /* Replace with your image */
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        #farm {
+            background-image: url('farm.jpg'); /* Replace with your image */
         }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .vision {
+            font-style: italic;
+            color: #555;
         }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            margin-top: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--earthy-green);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: var(--warm-brown);
+        }
+        a {
+            color: var(--warm-brown);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="light">
-    <header>
-        <h1>Welcome to Something Deep</h1>
-        <p>A place where good things live.</p>
-        <button id="theme-toggle">Toggle Dark Mode</button>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>The Beginning</h2>
-            <p>This is your canvas—paint it with purpose. Replace this with your story, your project, or your passion. Let it breathe meaning.</p>
-        </section>
-
-        <section>
-            <h2>The Middle</h2>
-            <p>Here’s where the depth grows. Add your ideas, showcase your work, or link to something that matters. Make it yours.</p>
-        </section>
-
-        <section>
-            <h2>The End (For Now)</h2>
-            <p>Every ending is a new start. What’s next? Drop a call-to-action, a contact link, or just some wisdom.</p>
-        </section>
+<body>
+    <div class="header">
+        <h1>ExitBox.how</h1>
+        <ul class="nav">
+            <li><a href="#warehouse">The Warehouse</a></li>
+            <li><a href="#farm">The Farm</a></li>
+            <li><a href="#vision">Our Vision</a></li>
+            <li><a href="#contact">Get in Touch</a></li>
+        </ul>
     </div>
 
-    <footer>
-        <p>&copy; 2025 You. Built with heart.</p>
-    </footer>
+    <section id="warehouse">
+        <div class="hero-image" style="background-image: url('warehouse.jpg');"></div>
+        <h2>The Warehouse</h2>
+        <p>Nestled in the heart of the Mission District, just a block from 16th St BART, this warehouse is more than a building—it’s a canvas. It’s funky, with homeless folks sleeping next to trash along the street, but that’s part of its realness. This place has a rich history, and I’m totally in love with it.</p>
+        <p>Here’s the plan: the first floor becomes offices for creators and doers. The second floor—right now an art coop—turns into a school. Not some stiff, boxed-in thing, but a space where kids can learn their way. In a few years, we’ll build two more floors for families to live, work, and grow together. And up top, a roof with a statue of splitting arrows—breaking the line of sight and symbolizing focus, freedom, and questioning everything.</p>
+    </section>
+
+    <section id="farm">
+        <div class="hero-image" style="background-image: url('farm.jpg');"></div>
+        <h2>The Farm</h2>
+        <p>For a quarter or third of the year, we’ll ditch the city for a farm outside Seattle. It’s where the kids can garden hard, play wild, and soak up nature. This isn’t about running away—it’s about growing bigger. The land’s got lessons you can’t fake, and there’s nothing like it for expanding your head and heart.</p>
+    </section>
+
+    <section id="vision">
+        <h2>Our Vision</h2>
+        <p class="vision">I was homeschooled, and it messed me up in the best ways—left me curious and free. Now I want that for my kids: a mind-nutrient-rich spot where they can create, destroy, and figure shit out. Not pampered—real. A place that trusts them to find their own path, even when it’s messy.</p>
+        <p>ExitBox.how is about building that—a community where learning’s raw and alive. It’s not for everyone, and I’m cool with that. If you’re here, you probably feel it too. Let’s make it happen.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Got questions? Ideas? Wanna be part of this? Hit us up—we’re all ears.</p>
+        <form data-netlify="true">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Email: <a href="mailto:contact@exitbox.how">contact@exitbox.how</a></p>
+    </section>
 
     <script>
-        // Dark mode toggle
-        const toggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('light');
-            body.classList.toggle('dark');
-            toggleButton.textContent = body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
