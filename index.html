@@ -3,156 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Deeply Good Page</title>
+    <title>ExitBox.how - A Work in Progress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --dark-green: #4B4F31;
+            --warm-brown: #8B4513;
+            --soft-beige: #FDFAF6;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Light and Dark Mode */
-        body.light {
-            background: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--soft-beige);
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-        body.dark {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        /* Header */
-        header {
+        .header {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(135deg, #6b48ff, #00ddeb);
+        }
+        .header h1 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
             color: white;
-            position: relative;
+            text-decoration: none;
+            font-size: 1.2em;
         }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            animation: fadeIn 1s ease-in;
+        .nav a:hover {
+            color: var(--warm-brown);
         }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Toggle Button */
-        #theme-toggle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            transition: background 0.3s;
-        }
-        #theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .note {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
         }
         section {
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: slideUp 0.8s ease forwards;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        section:nth-child(1) { animation-delay: 0.2s; }
-        section:nth-child(2) { animation-delay: 0.4s; }
-        section:nth-child(3) { animation-delay: 0.6s; }
         h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: inherit;
+            font-family: 'Indie Flower', cursive;
+            font-size: 2em;
+            color: var(--dark-green);
         }
         p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            line-height: 1.6;
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
+        .hero-image {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            margin-bottom: 20px;
         }
-        footer.dark {
-            background: #111;
+        #warehouse {
+            background-image: url('warehouse.jpg'); /* Replace with your image */
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        #farm {
+            background-image: url('farm.jpg'); /* Replace with your image */
         }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
+        form label {
+            margin-top: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--dark-green);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: var(--warm-brown);
+        }
+        a {
+            color: var(--warm-brown);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="light">
-    <header>
-        <h1>Welcome to Something Deep</h1>
-        <p>A place where good things live.</p>
-        <button id="theme-toggle">Toggle Dark Mode</button>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>The Beginning</h2>
-            <p>This is your canvas—paint it with purpose. Replace this with your story, your project, or your passion. Let it breathe meaning.</p>
-        </section>
-
-        <section>
-            <h2>The Middle</h2>
-            <p>Here’s where the depth grows. Add your ideas, showcase your work, or link to something that matters. Make it yours.</p>
-        </section>
-
-        <section>
-            <h2>The End (For Now)</h2>
-            <p>Every ending is a new start. What’s next? Drop a call-to-action, a contact link, or just some wisdom.</p>
-        </section>
+<body>
+    <div class="header">
+        <h1>ExitBox.how</h1>
+        <ul class="nav">
+            <li><a href="#warehouse">The Warehouse</a></li>
+            <li><a href="#farm">The Farm</a></li>
+            <li><a href="#dream">The Dream</a></li>
+            <li><a href="#talk">Talk to Me</a></li>
+        </ul>
     </div>
 
-    <footer>
-        <p>&copy; 2025 You. Built with heart.</p>
-    </footer>
+    <div class="note">Hey, this is still evolving—bear with me as I figure it out.</div>
+
+    <section id="warehouse">
+        <div class="hero-image" style="background-image: url('warehouse.jpg');"></div>
+        <h2>The Warehouse</h2>
+        <p>So, this is the warehouse in the Mission, near 16th St BART. It’s funky—homeless folks, trash, but also a ton of history. I’m in love with it. Here’s the plan: offices downstairs, a school on the second floor, and eventually, places for families to live above. Oh, and a rooftop with a statue of splitting arrows—kinda symbolic, you know?</p>
+    </section>
+
+    <section id="farm">
+        <div class="hero-image" style="background-image: url('farm.jpg');"></div>
+        <h2>The Farm</h2>
+        <p>Then there’s the farm outside Seattle. We’ll go there for a few months each year to get our hands dirty and let the kids run wild. Nature’s the best teacher, right?</p>
+    </section>
+
+    <section id="dream">
+        <h2>The Dream</h2>
+        <p>I was homeschooled, and it shaped me in ways I’m still figuring out. I want that for my kids—freedom to learn, create, and mess up. Not in a fancy way, just real. This place is about that.</p>
+    </section>
+
+    <section id="talk">
+        <h2>Talk to Me</h2>
+        <p>If this resonates, or if you’ve got ideas, hit me up. I’m still figuring this out and could use some friends along the way.</p>
+        <form data-netlify="true">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Or email me at <a href="mailto:contact@exitbox.how">contact@exitbox.how</a></p>
+    </section>
 
     <script>
-        // Dark mode toggle
-        const toggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('light');
-            body.classList.toggle('dark');
-            toggleButton.textContent = body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
