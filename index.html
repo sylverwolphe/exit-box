@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exitbox - WIP</title>
+    <title>exitbox</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -47,8 +47,11 @@
         .note {
             text-align: center;
             font-style: italic;
-            color: #555;
-            margin: 20px 0;
+            color: #333;
+            background-color: white;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 800px;
         }
         section {
             margin: 40px auto;
@@ -68,14 +71,15 @@
         .hero-image {
             background-size: cover;
             background-position: center;
-            height: 300px;
+            height: 50vh;
+            min-height: 300px;
             margin-bottom: 20px;
         }
-        #warehouse {
-            background-image: url('https://i.imgur.com/0yJ2VO9.png'); /* Replace with your image */
+        #warehouse .hero-image {
+            background-image: url('https://i.imgur.com/0yJ2VO9.png');
         }
-        #farm {
-            background-image: url('https://i.imgur.com/e9H5Akj.png'); /* Replace with your image */
+        #farm .hero-image {
+            background-image: url('https://i.imgur.com/e9H5Akj.png');
         }
         form {
             display: flex;
@@ -116,7 +120,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>ExitBox.how</h1>
+        <h1>exitbox</h1>
         <ul class="nav">
             <li><a href="#warehouse">The Warehouse</a></li>
             <li><a href="#farm">The Farm</a></li>
@@ -128,13 +132,13 @@
     <div class="note">Hey, this is still evolving—bear with me as I figure it out.</div>
 
     <section id="warehouse">
-        <div class="hero-image" style="background-image: url('warehouse.jpg');"></div>
+        <div class="hero-image"></div>
         <h2>The Warehouse</h2>
         <p>So, this is the warehouse in the Mission, near 16th St BART. It’s funky—homeless folks, trash, but also a ton of history. I’m in love with it. Here’s the plan: offices downstairs, a school on the second floor, and eventually, places for families to live above. Oh, and a rooftop with a statue of splitting arrows—kinda symbolic, you know?</p>
     </section>
 
     <section id="farm">
-        <div class="hero-image" style="background-image: url('farm.jpg');"></div>
+        <div class="hero-image"></div>
         <h2>The Farm</h2>
         <p>Then there’s the farm outside Seattle. We’ll go there for a few months each year to get our hands dirty and let the kids run wild. Nature’s the best teacher, right?</p>
     </section>
